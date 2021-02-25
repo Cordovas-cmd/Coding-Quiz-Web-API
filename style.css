@@ -9,7 +9,7 @@
 body{
     background: slateblue;
 }
-
+/* Start button rules box position */
 .start_btn,
 .rules_box
 {
@@ -18,7 +18,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* Start button style */
 .start_btn button{
     font-size: 24px;
     font-weight: 500;
@@ -30,15 +30,45 @@ body{
     cursor:pointer;
 }
 .rules_box{
+    display: none;
     width: 535px;
     background: #fff;
     border-radius: 5px;
 
 }
+/* Rules box and title style and padding etc */
 .rules_box .rules_title{
     height: 60px;
-    width: 100%;
+    width: 88%;
     border-bottom: 2px solid lightseagreen;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.rules_box .rules_list{
+    padding: 15px 35px;
+}
+.rules_box .rules_list .rules{
+    font-size: 18px;
+    margin: 5px;
+}
+.rules_box .button{
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 0 30px;
+border-top: 2px solid lightseagreen;
+}
+
+.rules_box .button button{
+    margin: 0 5px;
+    height: 40px;
+    width: 400px;
+    font-size: 16px;
+    cursor: pointer;
 }
 h1 {
     background-color: plum;
