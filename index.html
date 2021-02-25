@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coding Quiz API</title>
+    <link rel="stylesheet" type="text/css" href="./Coding-Quiz-Web-API/style.css">
 </head>
 <!-- Need an area to hold question and answer choice buttons -->
 <!-- Need Text box for questions -->
@@ -17,8 +18,27 @@
 <!-- After user submits Initials and high score Two buttons with the options "go back" or "clear high score" -->
 <body>
     <h1 class="time" style="text-align:right"></h1>
+    <!-- Start quiz button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+    <!-- Rules/Info box -->
+    <div class="rules_box">
+        <div class="rules_title">
+            <span>Rules of the Quiz</span>
+        </div>
+        <div class="rules_list">
+            <div class="rules">1. You will have X amount of time to answer each question</div>
+            <div class="rules">2. Once you select your answer you can't reselect</div>
+            <div class="rules">3. You can't select any answer once the timer reaches 0</div>
+            <div class="rules">4. You can't exit From the Quiz once you start or score won't log</div>
+            <div class="rules">5. You'll get points based on X</div>
+        </div>
+        <div class="button">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Play again</button>
+        </div>
+    </div>
     <div id="main"></div>
 
-    <script src="script.js"></script>
+    <script src="./Coding-Quiz-Web-API/script.js"></script>
 </body>
 </html>

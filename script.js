@@ -25,7 +25,6 @@ function setTime() {
     }, 1000);
 
 }
-
 setTime()
 // Need some way to log score
 
