@@ -1,8 +1,54 @@
-// Need a variable with coding questions (5 or 6)
-// Some way to generate random group of possible answers that tie into selected quiz question
-// Timer will start at 75 seconds, for every wrong answer It will take a few seconds off the timer.
-// Final score will be amount of time left after answering all questions.
-// 
+//set up query selectors
+//Start selector/ Start it up
+let start = document.querySelector("#start");
+
+//Rules Section Start
+// -------------------------------------------------------------------
+let rules = document.querySelector("#rules");
+let exit = document.querySelector("#exit");
+let continueBtn = document.querySelector("#continue");
+
+//Quiz Section Start
+let quizbox = document.querySelector("#quizbox");
+
+//Questions
+let qnum = document.querySelector("#qnum");
+let qtext = document.querySelector("#qtext");
+
+//Multiple Choice Options
+let option1 = document.querySelector("#option1");
+let option2 = document.querySelector("#option2");
+let option3 = document.querySelector("#option3");
+let option4 = document.querySelector("#option4");
+
+//Score and next button 
+let total_correct = document.querySelector("#total_correct");
+let next = document.querySelector("#next_question");
+
+//Final Results
+let points = document.querySelector("#points");
+let quit = document.querySelector("#quit")
+let playAgain = document.querySelector("#playAgain");
+
+//Call all choices from question section of quiz
+let choice_num = document.querySelector(".choice_num");
+
+//Final score (total correct)
+let correct = 0;
+
+//storing the answer
+let userChoice = undefined;
+
+//Event listener (After you click start what will happen?)
+start.addEventListener("click", ()=>{
+    start.style.display = "none";
+    rules.style.display = "block";
+});
+//Event listener (After you click Exit button what will happen?)
+exit.addEventListener("click", ()=>{
+    start.style.display = "block";
+    rules.style.display = "none";
+});
 
 // Need a timer
 var timeEl = document.querySelector(".time");
@@ -33,3 +79,8 @@ setTime()
 // need an event lsitener that know's when you click "start game" to trigger the rest of the functions
 // A way to log form submission at the end so User can input initials , pair that with High score and log it into list of high scores.
 // A button that can clear highscores.
+// Need a variable with coding questions (5 or 6)
+// Some way to generate random group of possible answers that tie into selected quiz question
+// Timer will start at 75 seconds, for every wrong answer It will take a few seconds off the timer.
+// Final score will be amount of time left after answering all questions.
+// 

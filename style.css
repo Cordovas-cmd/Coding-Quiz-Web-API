@@ -19,7 +19,7 @@ body{
 }
 /* Start button rules box position */
 #start,
-.rules_box
+#rules_box
 {
     position: absolute;
     top: 50%;
@@ -37,7 +37,7 @@ body{
     border: 1px solid;
     border-radius: 30px 10px;
     cursor:pointer;
-    display: none;
+    /* display: none; */
 }
 #start:hover
 {
@@ -188,6 +188,7 @@ border-top: 2px solid lightseagreen;
     border: 2px solid plum;
     overflow: hidden;
     position:relative;
+    display: none;
 }
 #container #results h6{
     height: 40px;
