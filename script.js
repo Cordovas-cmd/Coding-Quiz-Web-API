@@ -50,6 +50,7 @@ exit.addEventListener("click", ()=>{
     rules.style.display = "none";
 });
 
+
 // Need a timer
 var timeEl = document.querySelector(".time");
 var mainEl = document.getElementById("main");
