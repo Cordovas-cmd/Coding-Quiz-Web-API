@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,29 +17,65 @@
 <!-- Need a start game button -->
 <!-- A form text field for a user to enter initials with a "submit button" -->
 <!-- After user submits Initials and high score Two buttons with the options "go back" or "clear high score" -->
+
 <body>
     <h1 class="time" style="text-align:right"></h1>
-    <!-- Start quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
-    <!-- Rules/Info box -->
-    <div class="rules_box">
-        <div class="rules_title">
-            <span>Rules of the Quiz</span>
+    <div id="container">
+        <!-- Start quiz button -->
+        <div id="start"> Start Quiz</div>
+        <!-- Rules/Info box -->
+        <div id="rules">
+            <h2>Rules of the Quiz</h2>
+            <h4>1. You will have X amount of time to answer each question</h4>
+            <h4>2. Once you select your answer you can't reselect</h4>
+            <h4>3. You can't select any answer once the timer reaches 0</h4>
+            <h4>4. You can't exit From the Quiz once you start or score won't log</h4>
+            <h4>5. You'll get points based on X</h4>
+            <div class="button">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button>
+
+            </div>
         </div>
-        <div class="rules_list">
-            <div class="rules">1. You will have X amount of time to answer each question</div>
-            <div class="rules">2. Once you select your answer you can't reselect</div>
-            <div class="rules">3. You can't select any answer once the timer reaches 0</div>
-            <div class="rules">4. You can't exit From the Quiz once you start or score won't log</div>
-            <div class="rules">5. You'll get points based on X</div>
+
+        <!-- Quiz box -->
+        <div id="quizbox">
+            <header>
+                <div class="title">Coding Quiz App</div>
+            </header>
+            <!-- Quiz Questions -->
+            <div id="question">
+                <h2 id="qnum">1.</h2>
+                <h2 id="qtext">What Does HTML stand for?</h2>
+            </div>
+            <!-- QUIZ CHOICES -->
+            <div id="choicesList">
+                <h4 class="choice_num" id="option1">Hyper Time Memo Language</h4>
+                <h4 class="choice_num" id="option2">Hideous Treacherous Magical Lie</h4>
+                <h4 class="choice_num" id="option3">Hyper Type Mark-Up Listener</h4>
+                <h4 class="choice_num" id="option4">Hyper Text Markup Language</h4>
+            </div>
+            <!-- Score Section -->
+            <div id="scoreSection">
+                <h3 id="total_correct">1 of 4</h3>
+                <h3 id="next_question">Next</h3>
+            </div>
+
+
         </div>
-        <div class="button">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Play again</button>
+        <!-- Final Score -->
+        <div id="results">
+            <h6>The Quiz Has Completed!</h6>
+            <h6 id="points">You got 3 of 4 correct!</h6>
+            <button id="save">Save Score</button>
+            <button id="quit">Quit</button>
+            <button id="playAgain">Play Again</button>
+            
         </div>
     </div>
     <div id="main"></div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

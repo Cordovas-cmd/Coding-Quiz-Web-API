@@ -8,9 +8,17 @@
 }
 body{
     background: slateblue;
+    display: grid;
+    place-items: center;
+    height: 105vh;
+
+}
+#container{
+    height:auto;
+    width: auto;
 }
 /* Start button rules box position */
-.start_btn,
+#start,
 .rules_box
 {
     position: absolute;
@@ -19,42 +27,50 @@ body{
     transform: translate(-50%, -50%);
 }
 /* Start button style */
-.start_btn button{
+#start{
     font-size: 24px;
     font-weight: 500;
     color:rgb(177, 16, 177);
     background: #fff;
     padding: 15px 25px;
     outline: none;
-    border: none;
+    border: 1px solid;
+    border-radius: 30px 10px;
     cursor:pointer;
-}
-.rules_box{
     display: none;
+}
+#start:hover
+{
+    background:lightcoral;
+    color:lightgreen;
+}
+/* RULES SECTION */
+#rules, #quizbox{
+    /* display: none; */
+    height: auto;
     width: 535px;
+    padding: 20px;
     background: #fff;
-    border-radius: 5px;
-
+    border-radius: 30px 10px;
+    display: none;
 }
 /* Rules box and title style and padding etc */
-.rules_box .rules_title{
+#rules h2{
     height: 60px;
     width: 88%;
     border-bottom: 2px solid lightseagreen;
     display: flex;
     align-items: center;
     padding: 0 30px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
 }
-.rules_box .rules_list{
+#rules h4{
     padding: 15px 35px;
-}
-.rules_box .rules_list .rules{
     font-size: 18px;
     margin: 5px;
 }
-.rules_box .button{
+#rules .button{
 height: 60px;
 display: flex;
 align-items: center;
@@ -63,13 +79,168 @@ padding: 0 30px;
 border-top: 2px solid lightseagreen;
 }
 
-.rules_box .button button{
+#rules .button button{
     margin: 0 5px;
     height: 40px;
     width: 400px;
     font-size: 16px;
     cursor: pointer;
 }
+#rules .button button:hover
+{
+    background: skyblue;
+}
+#quizbox{
+    /* display: block; */
+    height: 480px;
+    position: relative;
+    }
+#quizbox header{
+    height: 50px;
+    width:95%;
+    background:teal;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 30px 0;
+}
+
+/* Quiz Question Style */
+#quizbox #question {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+#quizbox #question h2 {
+    font-size: 25px;
+}
+/* #quiz #question h2:first-child{ */
+    /* margin: 0 10px 0 5px; */
+/* } */
+/* QUIZ CHOICES */
+#quizbox #choicesList{
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 150px;
+}
+#quizbox #choicesList h4{
+    height: 50px;
+    width: 500px;
+    background: #ff5267;
+    line-height: 45px;
+    margin: 5px 2px;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 18px;
+    color: black;
+    overflow: hidden;
+    border: 2px solid rgb(92, 15, 92);
+    cursor: pointer;
+}
+#quizbox #choicesList h4:hover{
+    background: rgb(163, 11, 130);
+}
+/* SCORE SECTION CSS */
+#quizbox #scoreSection{
+    height: 50px;
+    width: 90%;
+    background: teal;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px 0;
+}
+#quizbox #scoreSection h3{
+    margin: 0px 30px;
+    display:none;
+}
+#quizbox #scoreSection h3:last-child{
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+    background:violet;
+    position: absolute;
+    color:black;
+    right:0;
+    border: 2px solid;
+    border-radius: 15px 5px;
+    cursor: pointer;
+    margin: 0 15px;
+
+}
+#quizbox #scoreSection h3:hover{
+    background:palevioletred;
+}
+/* Final Result Section */
+#container #results{
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    background:palevioletred;
+    border-radius: 30px 15px;
+    border: 2px solid plum;
+    overflow: hidden;
+    position:relative;
+}
+#container #results h6{
+    height: 40px;
+    width: 87%;
+    font-size: 25px;
+    position: absolute;
+    text-align: center;
+    top: 200px;
+}
+#container #results #points{
+    font-size: 30px;
+    top: 275px;
+}
+#container #results #save{
+    height: 60px;
+    width: 200px;
+    border:none;
+    outline:none;
+    background:fuchsia;
+    color:black;
+    position:absolute;
+    left:110px;
+    top: 100px;
+    border: 2px solid palegreen;
+    border-radius: 20px 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#container #results button{
+    height: 60px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background:lawngreen;
+    color:violet;
+    position: absolute;
+    left: 110px;
+    top: 390px;
+    border: 2px solid slateblue;
+    border-radius: 15px 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#container #results button:last-child {
+    top: 460px;
+}
+#container #results button:hover {
+    background:steelblue;
+}
+#container #results #save:hover{
+    background: powderblue;
+}
 h1 {
     background-color: plum;
+    float:right;
 }
